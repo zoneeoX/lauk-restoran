@@ -3,7 +3,7 @@
         class="absolute -z-10 brightness-75 w-screen h-screen object-center object-cover" alt="">
     <section class="relative w-screen h-screen grid place-items-center">
         <div>
-            <h1 class="text-[12vw] font-black text-slate-900 brightness-125 font-header">
+            <h1 class="text-[12vw] font-black text-yellow-400 brightness-125 font-header">
                 RESTO LAUK
             </h1>
         </div>

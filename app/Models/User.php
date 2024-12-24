@@ -46,4 +46,10 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function menuList() {
+        return $this->hasMany(Menu::class, 'user_id');
+    }
+
+
 }
