@@ -1,5 +1,5 @@
 <x-layout>
-    <section class="w-screen min-h-screen bg-slate-900 relative overflow-x-hidden">
+    <section class="w-screen h-screen bg-slate-900 relative overflow-x-hidden overflow-y-auto">
         <div class="flex flex-col p-10">
             <div class="flex rounded-xl text-white flex-col ">
                 <div class="flex flex-col  text-white w-screen">
@@ -15,6 +15,7 @@
                             <input type="text" name="title" placeholder="Nama makanan."
                                 class=" bg-slate-800 border-b border-white/20 px-4 min-w-10 py-2 text-lg outline-none" />
                         </div>
+
                         <div class="flex flex-col basis-2/3">
                             <label for="">Informasi Makanan</label>
                             <input type="text" name="body" placeholder="Deskripsi makanan."
@@ -27,7 +28,7 @@
 
                         </div>
                         <div class="flex flex-col basis-auto">
-                            <label for="photo">Foto makanannya</label>
+                            <label for="photo">Foto makanan</label>
                             <input type="file" name="photo"
                                 class="bg-slate-800 border-b border-white/20 px-4 py-2 text-lg outline-none
                         file:rounded-full file:border-0

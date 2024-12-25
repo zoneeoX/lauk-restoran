@@ -1,7 +1,7 @@
 <x-layout>
     <section
         class="bg-zinc-900 text-white brightess-125 w-screen h-screen flex justify-center font-header items-center text-lg">
-        <div class="w-1/2 overflow-hidden z-50 flex-1">
+        <div class="w-1/2 overflow-hidden z-40 flex-1">
             <img src="https://images8.alphacoders.com/694/694126.jpg"
                 class="w-screen h-screen object-cover object-center p-2 rounded-2xl brightness-75" alt="">
         </div>

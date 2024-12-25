@@ -42,6 +42,12 @@ public function showTambahMenu() {
     return view('tambah-menu', compact('menuList'));
 }
 
+public function showMenuPesan() {
+    $menuList = Menu::all();
+
+    return view('menu-pesan', compact('menuList'));
+}
+
 public function displayEditMakanan(Menu $makanan){
     if(auth()->user()->id !== $makanan['user_id']){
         return redirect('/');

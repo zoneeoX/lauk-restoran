@@ -11,8 +11,8 @@
 </head>
 
 <body>
-    <header class="relative z-50 top-0">
-        <nav class="w-screen h-[110px] font-header bg-purple-900 border-b-black">
+    <header class="sticky z-50 top-0">
+        <nav class="w-screen h-[110px] font-header bg-purple-900 filter backdrop-blur-lg border-b-black">
             <ul class="flex items-center justify-between p-4">
                 @auth
                     <div class="cursor-pointer flex flex-row gap-2 bg-purple-800 justify-center items-center p-2 rounded-xl">
@@ -20,7 +20,7 @@
                             <h1>USER</h1>
                         </div>
 
-                        @if (Auth::user()->where('role', 'admin')->exists())
+                        @if (Auth::check() && Auth::user()->role === 'admin')
                             <div class="flex flex-col text-white font-header">
                                 <span>ADMIN USER</span>
                                 <span class="opacity-50">*note untuk modify menu</span>
@@ -31,6 +31,7 @@
                                 <span class="opacity-50">{{ Auth::user()->email }}</span>
                             </div>
                         @endif
+
 
 
 
@@ -52,17 +53,20 @@
                     <a href="/">
                         <li>Home</li>
                     </a>
-                    
+
+                    <a href="/invoices">
+                        <li>Invoices</li>
+                    </a>
+
                     <a href="/menu-pesan">
                         <li class="bg-white text-black px-2 py-1 hover:text-white hover:bg-black transition">Pesan
                             Online!</li>
                     </a>
-                    @if (Auth::user()->where('role', 'admin'))
-                    <a href="/tambah-menu">
-                        <li class="bg-red-700 text-white px-2 py-1 hover:bg-red-800 transition">Tambah
-                            Menu</li>
-                    </a>
-
+                    @if (Auth::check() && Auth::user()->role === 'admin')
+                        <a href="/tambah-menu">
+                            <li class="bg-red-700 text-white px-2 py-1 hover:bg-red-800 transition">Tambah
+                                Menu</li>
+                        </a>
                     @endif
                 </div>
             </ul>
